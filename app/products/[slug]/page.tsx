@@ -11,7 +11,7 @@ import { cookies, draftMode } from 'next/headers'
  
 
 
-export default async function  Page({params, preview}) {
+export default async function  Page({params}) {
     const isDraft = draftMode().isEnabled
     const product = await getProductBySlug(params.slug, isDraft)
     const reviews = product?.reviews?.data;
